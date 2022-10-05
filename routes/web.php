@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin;
+use App\Http\Controllers\DataController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,11 +14,14 @@ use App\Http\Controllers\Admin;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-*/
+});
+
 Route::prefix('admin')->group(function(){
     Route::get('/',[Admin\Auth\LoginController::class,'loginForm']);
     Route::get('/login',[Admin\Auth\LoginController::class,'loginForm'])->name('admin.login');
     Route::get('/home',[Admin\HomeController::class,'index'])->name('admin.home');
 });
+
+    Route::get('/data', [DataController::class,'index']);
