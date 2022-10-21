@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\LandingPageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::prefix('admin')->group(function(){
     Route::get('/',[Admin\Auth\LoginController::class,'loginForm']);
     Route::get('/login',[Admin\Auth\LoginController::class,'loginForm'])->name('admin.login');
@@ -25,3 +27,5 @@ Route::prefix('admin')->group(function(){
 });
 
     Route::get('/data', [DataController::class,'index']);
+    Route::get('/landing', [LandingPageController::class,'index']);
+
