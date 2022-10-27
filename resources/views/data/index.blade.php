@@ -35,7 +35,7 @@ function w3_close() {
 </script>
 
 <h1>{{$judul}}</h1>
-<p>{{$deskripsi}}</p>
+{{-- <p>{{$deskripsi}}</p> --}}
 <p>Kategori : {{$kategori}}</p>
 <p>{{$tanggal}}</p>
 <div class="row">

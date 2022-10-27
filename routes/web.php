@@ -29,3 +29,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/data', [DataController::class,'index']);
     Route::get('/landing', [LandingPageController::class,'index']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

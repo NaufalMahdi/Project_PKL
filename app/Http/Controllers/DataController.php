@@ -17,7 +17,7 @@ class DataController extends Controller
       return view('data.index',[
         "data"=>$data,
         "judul"=>$data[0]-> judul,
-        "deskripsi"=>$data[0]-> deskripsi,
+        // "deskripsi"=>$data[0]-> deskripsi,
         "kategori"=>$data[0]-> namaKategori,  
         "tanggal"=>$data[0]->tanggal
       ]);
